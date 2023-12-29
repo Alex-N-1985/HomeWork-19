@@ -26,3 +26,32 @@
 
 // Задание 2 
 
+let productsType = {
+    "potato" : "овощи",
+    "carrot": "овощи",
+    "banana": "фрукты",
+    "orange": "фрукты",
+    "apple": "фрукты",
+    "strawberry": "ягоды",
+    "tomato": "овощи",
+    "melon": "фрукты",
+    "lemon": "фрукты",
+    "сabbage": "овощи",
+    "beet": "овощи",
+    "raspberry": "ягоды"
+}
+
+let productBag = {}
+
+for(let item in productsType){
+    if (productBag[productsType[item]]){
+        productBag[productsType[item]] += 1;
+    } else {
+        let prod = productsType[item];
+        productBag = {...productBag, [prod] : 1};
+    }
+}
+
+for (let key in productBag) {
+    console.log(key + " : " + productBag[key]);
+}
