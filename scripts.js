@@ -47,8 +47,7 @@ for(let item in productsType){
     if (productBag[productsType[item]]){
         productBag[productsType[item]] += 1;
     } else {
-        let prod = productsType[item];
-        productBag = {...productBag, [prod] : 1};
+        productBag[productsType[item]] = 1;
     }
 }
 
